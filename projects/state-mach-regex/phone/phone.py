@@ -8,13 +8,16 @@ line = input("Enter a phone number to validate or 'exit' when done. ")
 
 while line != "exit":
     # TODO Find matches
-
+    match = re.search("(\d{3}).?(\d{3}).?(\d{4})", line)
     
     # TODO If no match found, print that no number was found
-   
-   
-    
+    if match:
     # TODO Else, break number up into area code, prefix, and suffic
+        print(match.group(1, 2, 3))
+    else :
+        print("No number was found.")
+   
+
     
     
     # As a stretch goal, you can modify your regex to search for country codes
